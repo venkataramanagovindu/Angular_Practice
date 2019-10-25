@@ -1,0 +1,16 @@
+<div>
+    {{title}}
+</div>
+
+<div *appStructuralDirective='condition'>
+    condition
+</div>
+
+<a routerLink="/home" routerLinkActive="Active">Home</a>
+<a appMyDirective routerLink="/StudentDetails">StudentDetails</a>
+<a routerLink="/Form">Reactive Form</a>
+<a routerLink="/TemplateDrivenForm">Template Driven Form</a>
+
+
+
+<router-outlet></router-outlet>

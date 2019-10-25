@@ -1,0 +1,40 @@
+<h1>
+
+    You have to log in !!
+</h1>
+
+<p>
+    {{data | uppercase}}
+</p>
+
+<p>
+    {{object | json}}
+</p>
+
+<h2>Number pipes</h2>
+
+<h6>{{ 5.125 | number:'2.1'}}</h6>
+<h6>{{0.25 | percent}}</h6>
+
+<h6>{{0.25 | currency : 'INR'}}</h6>
+
+<h2>Date pipes</h2>
+
+<select name="" id="" (change)='changeDateFormat()' [value]='selectDropdown'>
+  <option value="1" selected>Short</option>
+  <option value="2">Medium</option>
+  <option value="3">Long</option>
+</select>
+
+<button (click)='toggleFormat()'>Toggle</button>
+
+<h6>{{date | date : format | uppercase}}</h6>
+<h6>{{date | date: 'short'}}</h6>
+<h6>{{date | date: 'mediun'}}</h6>
+<h6>{{date | date: 'long'}}</h6>
+<h6>{{date | date: 'shortDate'}}</h6>
+<h6>{{date | date: 'mediunDate'}}</h6>
+<h6>{{date | date: 'longDate'}}</h6>
+<h6>{{date | date: 'shortTime'}}</h6>
+<h6>{{date | date: 'mediunTime'}}</h6>
+<h6>{{date | date: 'longTime'}}</h6>

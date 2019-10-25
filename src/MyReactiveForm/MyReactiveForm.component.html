@@ -1,0 +1,63 @@
+<br><br> First Name : <input type="text" [formControl]='FirstNameControl'>
+<br><br>
+<b>Entered Value </b> {{FirstNameControl.value}}
+<br><br> Repalcing Control Value
+
+<button (click)="onclick()"> Replace the value</button>
+
+<!-- //formControl -->
+
+<div class="container">
+    <h2>Basic form</h2>
+    <form [formGroup]='userDetailsForm' (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="Text" formControlName="FirstNameCon" class="form-control" id="firstName" placeholder="Enter First Name" name="FirstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="Text" formControlName="LastNameCon" class="form-control" id="lastName" placeholder="Enter Last Name" name="LastName">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" formControlName="EmailCon" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" formControlName="PasswordCon" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        </div>
+
+        <!-- nesting form groups -->
+        <h3>Address field</h3>
+        <div formGroupName='UserAddress'>
+            <div class="form-group">
+                <label for="Housenumber">House Number:</label>
+                <input type="Text" formControlName="Hno" class="form-control" id="Housenumber" placeholder="Enter House number" name="HouseNumber">
+            </div>
+            <div class="form-group">
+                <label for="street">Street:</label>
+                <input type="Text" formControlName="street" class="form-control" id="street" placeholder="Enter street Name" name="Street">
+            </div>
+            <div class="form-group">
+                <label for="city">City :</label>
+                <input type="Text" formControlName="city" class="form-control" id="city" placeholder="Enter city Name" name="City">
+            </div>
+        </div>
+        <div formArrayName='arrayData'>
+            <h3>Add Array</h3>
+            <br>
+            <button (click)="addArrayData()">Add Array</button>
+
+            <div *ngFor="let UserAddres of arrayData.controls; let i = index">
+                <label>Array :<input type="text" [formControlName] = "i" value="UserAddres"></label>
+            </div>
+        </div>
+        <!-- <div class="checkbox">
+     <label><input type="checkbox" name="remember"> Remember me</label>
+   </div> -->
+        <button type="submit" class="btn btn-default" [disabled]='!userDetailsForm.valid'>Submit</button>
+        <button type="button" class="btn btn-secondery" (click)="updateForm()"> UpdateForm</button>
+    </form>
+
+    <b>Form Status : {{userDetailsForm.status}}</b>
+</div>
