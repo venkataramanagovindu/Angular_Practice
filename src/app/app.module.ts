@@ -11,6 +11,7 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 // import { from } from 'rxjs';
 import { MyReactiveFormComponent } from '../MyReactiveForm/MyReactiveForm.component';
 import { MyTemplateDrivenHeroComponent } from '../My-TemplateDrivenHero/My-TemplateDrivenHero.component';
+import { MyCustomPipePipe } from 'src/MyCustomPipe.pipe';
 
 @NgModule({
    declarations: [
@@ -20,7 +21,8 @@ import { MyTemplateDrivenHeroComponent } from '../My-TemplateDrivenHero/My-Templ
       MyDirectiveDirective,
       StructuralDirective,
       MyReactiveFormComponent,
-      MyTemplateDrivenHeroComponent
+      MyTemplateDrivenHeroComponent,
+      MyCustomPipePipe
    ],
    imports: [
       BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyCustomPipePipe } from 'src/MyCustomPipe.pipe';
 
 @Component({
   selector: 'app-Home',

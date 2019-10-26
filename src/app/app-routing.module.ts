@@ -6,7 +6,7 @@ import { MyReactiveFormComponent } from 'src/MyReactiveForm/MyReactiveForm.compo
 import { MyTemplateDrivenHeroComponent } from 'src/My-TemplateDrivenHero/My-TemplateDrivenHero.component';
 // import { MyDirectiveDirective } from '../my-directive.directive';
 // import { StructuralDirective } from '../Structural.directive';
-import { MyCustomPipePipe } from 'src/MyCustomPipe.pipe';
+
 
 
 const routes: Routes = [
@@ -26,7 +26,7 @@ const routes: Routes = [
    declarations: [
       //MyDirectiveDirective,
       //StructuralDirective,
-      MyCustomPipePipe
+      // MyCustomPipePipe
    ]
 })
 export class AppRoutingModule { }
