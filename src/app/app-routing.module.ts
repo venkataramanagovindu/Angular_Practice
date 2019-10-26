@@ -6,7 +6,7 @@ import { MyReactiveFormComponent } from 'src/MyReactiveForm/MyReactiveForm.compo
 import { MyTemplateDrivenHeroComponent } from 'src/My-TemplateDrivenHero/My-TemplateDrivenHero.component';
 // import { MyDirectiveDirective } from '../my-directive.directive';
 // import { StructuralDirective } from '../Structural.directive';
-import { MyCustomPipePipe } from '.e:/Learn/Angular/Practice/rxjs-learn/src/MyCustomPipe.pipe';
+import { MyCustomPipePipe } from 'src/MyCustomPipe.pipe';
 
 
 const routes: Routes = [
